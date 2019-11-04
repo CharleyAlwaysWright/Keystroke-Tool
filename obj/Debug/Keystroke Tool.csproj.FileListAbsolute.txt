@@ -1,0 +1,12 @@
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\bin\Debug\Keystroke Tool.exe.config
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\bin\Debug\Keystroke Tool.exe
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\bin\Debug\Keystroke Tool.pdb
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\bin\Debug\WindowsInput.dll
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\bin\Debug\WindowsInput.xml
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\obj\Debug\Keystroke Tool.csprojAssemblyReference.cache
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\obj\Debug\Keystroke_Tool.KeystrokeTool.resources
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\obj\Debug\Keystroke_Tool.Properties.Resources.resources
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\obj\Debug\Keystroke Tool.csproj.GenerateResource.cache
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\obj\Debug\Keystroke Tool.csproj.CopyComplete
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\obj\Debug\Keystroke Tool.exe
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\obj\Debug\Keystroke Tool.pdb

@@ -37,7 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.startDelayField = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // InputField
@@ -112,12 +112,13 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Start Delay (secs)";
             // 
-            // textBox1
+            // startDelayField
             // 
-            this.textBox1.Location = new System.Drawing.Point(276, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(86, 20);
-            this.textBox1.TabIndex = 9;
+            this.startDelayField.CausesValidation = false;
+            this.startDelayField.Location = new System.Drawing.Point(276, 42);
+            this.startDelayField.Name = "startDelayField";
+            this.startDelayField.Size = new System.Drawing.Size(86, 20);
+            this.startDelayField.TabIndex = 9;
             // 
             // KeystrokeTool
             // 
@@ -125,7 +126,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(363, 197);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.startDelayField);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -134,7 +135,9 @@
             this.Controls.Add(this.EnterCheckBox);
             this.Controls.Add(this.TabCheckBox);
             this.Controls.Add(this.InputField);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "KeystrokeTool";
             this.Text = "Keystroke Tool - King Chungus#6133";
             this.Load += new System.EventHandler(this.KeystrokeTool_Load);
@@ -152,7 +155,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox startDelayField;
     }
 }
 

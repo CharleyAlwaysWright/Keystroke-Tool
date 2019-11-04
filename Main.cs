@@ -28,26 +28,31 @@ namespace Keystroke_Tool
 
         private void KeystrokeTool_Load(object sender, EventArgs e)
         {
-            Simulator = new InputSimulator();
+            
         }
 
         private void GoBtn_Click(object sender, EventArgs e)
         {
+            Simulator = new InputSimulator();
+
             try { input = InputField.Text; }
             catch (NullReferenceException) { input = ""; }
-            try {delay = Convert.ToInt32(waitTimeField.Text);}
+            try { delay = Convert.ToInt32(waitTimeField.Text); }
             catch (FormatException) { delay = 0; }
             catch (NullReferenceException) { delay = 0; }
-            try { startDelay = Convert.ToInt32(waitTimeField.Text); }
-            catch (FormatException) { startDelay = 0; }
-            catch (NullReferenceException) { startDelay = 0; }
+            startDelay = Convert.ToInt32(startDelayField.Text);
             enter = EnterCheckBox.Checked;
             tab = TabCheckBox.Checked;
 
+
             Simulator.Keyboard.Sleep(startDelay * 1000);
-            Simulator.Keyboard.TextEntry(input);
-            if (enter == true) { Simulator.Keyboard.KeyPress(VirtualKeyCode.RETURN); }
-            if (tab == true) { Simulator.Keyboard.KeyPress(VirtualKeyCode.TAB); }
+            while (true)
+            {
+                Simulator.Keyboard.TextEntry(input);
+                if (enter == true) { Simulator.Keyboard.KeyPress(VirtualKeyCode.RETURN); }
+                if (tab == true) { Simulator.Keyboard.KeyPress(VirtualKeyCode.TAB); }
+                Simulator.Keyboard.Sleep(delay * 1000);
+            }
         }
     }
 }
