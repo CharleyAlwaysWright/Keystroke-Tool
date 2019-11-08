@@ -33,11 +33,13 @@
             this.TabCheckBox = new System.Windows.Forms.CheckBox();
             this.EnterCheckBox = new System.Windows.Forms.CheckBox();
             this.GoBtn = new System.Windows.Forms.Button();
-            this.waitTimeField = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.startDelayField = new System.Windows.Forms.TextBox();
+            this.repetitionsField = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.waitTimeField = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // InputField
@@ -45,45 +47,38 @@
             this.InputField.Location = new System.Drawing.Point(12, 25);
             this.InputField.Multiline = true;
             this.InputField.Name = "InputField";
-            this.InputField.Size = new System.Drawing.Size(257, 163);
+            this.InputField.Size = new System.Drawing.Size(257, 154);
             this.InputField.TabIndex = 1;
             // 
             // TabCheckBox
             // 
             this.TabCheckBox.AutoSize = true;
-            this.TabCheckBox.Location = new System.Drawing.Point(276, 130);
+            this.TabCheckBox.Location = new System.Drawing.Point(275, 144);
             this.TabCheckBox.Name = "TabCheckBox";
-            this.TabCheckBox.Size = new System.Drawing.Size(45, 17);
+            this.TabCheckBox.Size = new System.Drawing.Size(78, 17);
             this.TabCheckBox.TabIndex = 2;
-            this.TabCheckBox.Text = "Tab";
+            this.TabCheckBox.Text = "Tab at end";
             this.TabCheckBox.UseVisualStyleBackColor = true;
             // 
             // EnterCheckBox
             // 
             this.EnterCheckBox.AutoSize = true;
-            this.EnterCheckBox.Location = new System.Drawing.Point(276, 107);
+            this.EnterCheckBox.Location = new System.Drawing.Point(275, 121);
             this.EnterCheckBox.Name = "EnterCheckBox";
-            this.EnterCheckBox.Size = new System.Drawing.Size(51, 17);
+            this.EnterCheckBox.Size = new System.Drawing.Size(84, 17);
             this.EnterCheckBox.TabIndex = 3;
-            this.EnterCheckBox.Text = "Enter";
+            this.EnterCheckBox.Text = "Enter at end";
             this.EnterCheckBox.UseVisualStyleBackColor = true;
             // 
             // GoBtn
             // 
-            this.GoBtn.Location = new System.Drawing.Point(276, 153);
+            this.GoBtn.Location = new System.Drawing.Point(399, 144);
             this.GoBtn.Name = "GoBtn";
             this.GoBtn.Size = new System.Drawing.Size(75, 35);
             this.GoBtn.TabIndex = 4;
             this.GoBtn.Text = "Go";
             this.GoBtn.UseVisualStyleBackColor = true;
             this.GoBtn.Click += new System.EventHandler(this.GoBtn_Click);
-            // 
-            // waitTimeField
-            // 
-            this.waitTimeField.Location = new System.Drawing.Point(276, 81);
-            this.waitTimeField.Name = "waitTimeField";
-            this.waitTimeField.Size = new System.Drawing.Size(75, 20);
-            this.waitTimeField.TabIndex = 5;
             // 
             // label1
             // 
@@ -97,7 +92,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(272, 65);
+            this.label2.Location = new System.Drawing.Point(385, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 7;
@@ -120,17 +115,44 @@
             this.startDelayField.Size = new System.Drawing.Size(86, 20);
             this.startDelayField.TabIndex = 9;
             // 
+            // repetitionsField
+            // 
+            this.repetitionsField.CausesValidation = false;
+            this.repetitionsField.Location = new System.Drawing.Point(277, 81);
+            this.repetitionsField.Name = "repetitionsField";
+            this.repetitionsField.Size = new System.Drawing.Size(86, 20);
+            this.repetitionsField.TabIndex = 11;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(273, 65);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Repetitions";
+            // 
+            // waitTimeField
+            // 
+            this.waitTimeField.CausesValidation = false;
+            this.waitTimeField.Location = new System.Drawing.Point(388, 42);
+            this.waitTimeField.Name = "waitTimeField";
+            this.waitTimeField.Size = new System.Drawing.Size(86, 20);
+            this.waitTimeField.TabIndex = 12;
+            // 
             // KeystrokeTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(363, 197);
+            this.ClientSize = new System.Drawing.Size(483, 191);
+            this.Controls.Add(this.waitTimeField);
+            this.Controls.Add(this.repetitionsField);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.startDelayField);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.waitTimeField);
             this.Controls.Add(this.GoBtn);
             this.Controls.Add(this.EnterCheckBox);
             this.Controls.Add(this.TabCheckBox);
@@ -151,11 +173,13 @@
         private System.Windows.Forms.CheckBox TabCheckBox;
         private System.Windows.Forms.CheckBox EnterCheckBox;
         private System.Windows.Forms.Button GoBtn;
-        private System.Windows.Forms.TextBox waitTimeField;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox startDelayField;
+        private System.Windows.Forms.TextBox repetitionsField;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox waitTimeField;
     }
 }
 

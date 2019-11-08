@@ -18,8 +18,9 @@ namespace Keystroke_Tool
         public static bool enter;
         public static bool tab;
         public static InputSimulator Simulator;
-        public static int delay;
-        public static int startDelay;
+        public static double delay;
+        public static double startDelay;
+        public static int repetitions;
 
         public KeystrokeTool()
         {
@@ -37,21 +38,22 @@ namespace Keystroke_Tool
 
             try { input = InputField.Text; }
             catch (NullReferenceException) { input = ""; }
-            try { delay = Convert.ToInt32(waitTimeField.Text); }
+            try { delay = Convert.ToDouble(waitTimeField.Text); }
             catch (FormatException) { delay = 0; }
             catch (NullReferenceException) { delay = 0; }
-            startDelay = Convert.ToInt32(startDelayField.Text);
+            startDelay = Convert.ToDouble(startDelayField.Text);
+            repetitions = Convert.ToInt32(repetitionsField.Text);
             enter = EnterCheckBox.Checked;
             tab = TabCheckBox.Checked;
 
 
-            Simulator.Keyboard.Sleep(startDelay * 1000);
-            while (true)
+            Simulator.Keyboard.Sleep(Convert.ToInt32(startDelay * 1000));
+            for (int i = 0; i < repetitions; i++)
             {
                 Simulator.Keyboard.TextEntry(input);
                 if (enter == true) { Simulator.Keyboard.KeyPress(VirtualKeyCode.RETURN); }
                 if (tab == true) { Simulator.Keyboard.KeyPress(VirtualKeyCode.TAB); }
-                Simulator.Keyboard.Sleep(delay * 1000);
+                Simulator.Keyboard.Sleep(Convert.ToInt32(delay * 1000));
             }
         }
     }
