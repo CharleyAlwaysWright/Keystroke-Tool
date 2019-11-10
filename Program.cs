@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Keystroke_Tool
+namespace Keystroke_Tool_V2
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Keystroke_Tool
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new KeystrokeTool());
+            Application.Run(new Main());
         }
     }
 }
