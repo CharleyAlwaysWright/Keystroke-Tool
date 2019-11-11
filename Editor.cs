@@ -32,6 +32,8 @@ namespace Keystroke_Tool_V2
 
             Main.ofd.Filter = "KT|*.kt";
 
+            Main.ofd.Title = "Open Script";
+
             // Show dialog and put file name into OutputLabel
             if (Main.ofd.ShowDialog() == DialogResult.OK)
             {
@@ -50,6 +52,21 @@ namespace Keystroke_Tool_V2
         private void tabAtEndToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TabAtEnd = tabAtEndToolStripMenuItem.Checked;
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Main.sfd = new SaveFileDialog();
+            Main.sfd.Filter = "KT (*.kt)|*.kt";
+            Main.sfd.Title = "Save Script";
+
+            if (Main.sfd.ShowDialog() == DialogResult.OK)
+            {
+                Main.StreamWriter = new StreamWriter(File.Create(Main.sfd.FileName));
+
+                Main.StreamWriter.Write(EditorField.Text);
+                Main.StreamWriter.Dispose();
+            }
         }
     }
 }

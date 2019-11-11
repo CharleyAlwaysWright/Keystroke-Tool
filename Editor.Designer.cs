@@ -98,6 +98,7 @@
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // loadToolStripMenuItem
             // 
@@ -291,14 +292,14 @@
             // triggerToolStripMenuItem
             // 
             this.triggerToolStripMenuItem.Name = "triggerToolStripMenuItem";
-            this.triggerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.triggerToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.triggerToolStripMenuItem.Text = "Trigger";
             // 
             // enterAtEndToolStripMenuItem
             // 
             this.enterAtEndToolStripMenuItem.CheckOnClick = true;
             this.enterAtEndToolStripMenuItem.Name = "enterAtEndToolStripMenuItem";
-            this.enterAtEndToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.enterAtEndToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.enterAtEndToolStripMenuItem.Text = "Enter at end";
             this.enterAtEndToolStripMenuItem.Click += new System.EventHandler(this.enterAtEndToolStripMenuItem_Click);
             // 
@@ -307,7 +308,7 @@
             this.tabAtEndToolStripMenuItem.CheckOnClick = true;
             this.tabAtEndToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.tabAtEndToolStripMenuItem.Name = "tabAtEndToolStripMenuItem";
-            this.tabAtEndToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tabAtEndToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.tabAtEndToolStripMenuItem.Text = "Tab at end";
             this.tabAtEndToolStripMenuItem.Click += new System.EventHandler(this.tabAtEndToolStripMenuItem_Click);
             // 

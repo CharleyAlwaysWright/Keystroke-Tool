@@ -16,12 +16,15 @@ namespace Keystroke_Tool_V2
     public partial class Main : Form
     {
         public static OpenFileDialog ofd;
+        public string currWord;
         public static List<string> importedLines;
         public static double StartDelay;
         public static double CmdDelay;
         public static string LoadedFileContents;
         public static InputSimulator Simulator;
         public static int RepeatNo;
+        public static SaveFileDialog sfd;
+        public static StreamWriter StreamWriter;
         
 
         public Main()
@@ -40,6 +43,7 @@ namespace Keystroke_Tool_V2
             ofd = new OpenFileDialog();
 
             ofd.Filter = "KT|*.kt";
+            ofd.Title = "Open Script";
 
             // Show dialog and put file name into OutputLabel
             if(ofd.ShowDialog() == DialogResult.OK)
@@ -71,9 +75,17 @@ namespace Keystroke_Tool_V2
 
                     foreach (string word in words)
                     {
+                        currWord = word;
+
                         if (word.Contains("\\d"))
                         {
-                            // Do something
+                            int delayPos = 2 + currWord.IndexOf("\\d");
+                            int delayLength = currWord.Length - delayPos;
+
+                            int delay = Convert.ToInt32(currWord.Substring(delayPos, delayLength));
+
+
+                            Simulator.Keyboard.Sleep(delay);
                         }
                         else
                         {
@@ -112,6 +124,23 @@ namespace Keystroke_Tool_V2
             }
             catch (FormatException) { }
             catch (NullReferenceException) { };
+        }
+
+        private void SaveBtn_Click(object sender, EventArgs e)
+        {
+            sfd = new SaveFileDialog();
+            sfd.Filter = "KT (*.kt)|*.kt";
+            sfd.Title = "Save Script";
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter = new StreamWriter(File.Create(sfd.FileName));
+
+                StreamWriter.Write(importedLines);
+                StreamWriter.Dispose();
+
+                OutputLabel.Text = "Saved File: " + Path.GetFileName(sfd.FileName);
+            }
         }
     }
 }
