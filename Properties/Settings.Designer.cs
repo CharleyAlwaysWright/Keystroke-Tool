@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Keystroke_Tool.Properties
+namespace Keystroke_Tool_V2.Properties
 {
 
 
