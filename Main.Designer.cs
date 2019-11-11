@@ -40,6 +40,8 @@
             this.StopBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.OutputLabel = new System.Windows.Forms.Label();
+            this.RepeatNoField = new System.Windows.Forms.TextBox();
+            this.RepeatNoLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // StartDelayLabel
@@ -55,20 +57,20 @@
             // 
             this.StartDelayField.Location = new System.Drawing.Point(7, 20);
             this.StartDelayField.Name = "StartDelayField";
-            this.StartDelayField.Size = new System.Drawing.Size(100, 20);
+            this.StartDelayField.Size = new System.Drawing.Size(78, 20);
             this.StartDelayField.TabIndex = 1;
             // 
             // CmdDelayField
             // 
-            this.CmdDelayField.Location = new System.Drawing.Point(126, 20);
+            this.CmdDelayField.Location = new System.Drawing.Point(91, 20);
             this.CmdDelayField.Name = "CmdDelayField";
-            this.CmdDelayField.Size = new System.Drawing.Size(100, 20);
+            this.CmdDelayField.Size = new System.Drawing.Size(80, 20);
             this.CmdDelayField.TabIndex = 3;
             // 
             // CmdDelayLabel
             // 
             this.CmdDelayLabel.AutoSize = true;
-            this.CmdDelayLabel.Location = new System.Drawing.Point(123, 4);
+            this.CmdDelayLabel.Location = new System.Drawing.Point(88, 4);
             this.CmdDelayLabel.Name = "CmdDelayLabel";
             this.CmdDelayLabel.Size = new System.Drawing.Size(80, 13);
             this.CmdDelayLabel.TabIndex = 2;
@@ -82,6 +84,7 @@
             this.StartBtn.TabIndex = 4;
             this.StartBtn.Text = "Start";
             this.StartBtn.UseVisualStyleBackColor = true;
+            this.StartBtn.Click += new System.EventHandler(this.StartBtn_Click);
             // 
             // LoadBtn
             // 
@@ -138,12 +141,31 @@
             this.OutputLabel.TabIndex = 10;
             this.OutputLabel.Text = "No File Loaded";
             // 
+            // RepeatNoField
+            // 
+            this.RepeatNoField.Location = new System.Drawing.Point(177, 20);
+            this.RepeatNoField.Name = "RepeatNoField";
+            this.RepeatNoField.Size = new System.Drawing.Size(49, 20);
+            this.RepeatNoField.TabIndex = 12;
+            this.RepeatNoField.TextChanged += new System.EventHandler(this.RepeatNoField_TextChanged);
+            // 
+            // RepeatNoLabel
+            // 
+            this.RepeatNoLabel.AutoSize = true;
+            this.RepeatNoLabel.Location = new System.Drawing.Point(174, 4);
+            this.RepeatNoLabel.Name = "RepeatNoLabel";
+            this.RepeatNoLabel.Size = new System.Drawing.Size(62, 13);
+            this.RepeatNoLabel.TabIndex = 11;
+            this.RepeatNoLabel.Text = "Repeat No.";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(324, 91);
+            this.Controls.Add(this.RepeatNoField);
+            this.Controls.Add(this.RepeatNoLabel);
             this.Controls.Add(this.OutputLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.StopBtn);
@@ -159,6 +181,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.Text = "Keystroke Tool";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,6 +200,8 @@
         private System.Windows.Forms.Button StopBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label OutputLabel;
+        private System.Windows.Forms.TextBox RepeatNoField;
+        private System.Windows.Forms.Label RepeatNoLabel;
     }
 }
 

@@ -8,12 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using WindowsInput.Native;
+using WindowsInput;
 
 namespace Keystroke_Tool_V2
 {
     public partial class Main : Form
     {
         public static OpenFileDialog ofd;
+        public static List<string> importedLines;
+        public static double StartDelay;
+        public static double CmdDelay;
+        public static string LoadedFileContents;
+        public static InputSimulator Simulator;
+        public static int RepeatNo;
+        
 
         public Main()
         {
@@ -36,7 +45,73 @@ namespace Keystroke_Tool_V2
             if(ofd.ShowDialog() == DialogResult.OK)
             {
                 OutputLabel.Text = "Loaded File: " + ofd.SafeFileName;
+
+                importedLines = File.ReadAllLines(ofd.FileName).ToList();
+                LoadedFileContents = File.ReadAllText(ofd.FileName);
             }
+        }
+
+        private void StartBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                StartDelay = Convert.ToDouble(StartDelayField.Text);
+                CmdDelay = Convert.ToDouble(CmdDelayField.Text);
+            }
+            catch (FormatException) { StartDelay = 0; CmdDelay = 0; }
+            catch(ArgumentNullException) { StartDelay = 0; CmdDelay = 0; };
+
+            Simulator.Keyboard.Sleep(Convert.ToInt32(StartDelay));
+
+            for(int i = 0; i < RepeatNo; i++)
+            {
+                foreach (string line in importedLines)
+                {
+                    string[] words = line.Split(null);
+
+                    foreach (string word in words)
+                    {
+                        if (word.Contains("\\d"))
+                        {
+                            // Do something
+                        }
+                        else
+                        {
+                            switch (word)
+                            {
+                                case "\\e":
+                                    Simulator.Keyboard.KeyPress(VirtualKeyCode.RETURN);
+                                    break;
+
+                                case "\\t":
+                                    Simulator.Keyboard.KeyPress(VirtualKeyCode.TAB);
+                                    break;
+
+                                default:
+                                    Simulator.Keyboard.TextEntry(word);
+                                    Simulator.Keyboard.KeyPress(VirtualKeyCode.SPACE);
+                                    break;
+                            }
+                        }
+                    }
+                }
+                Simulator.Keyboard.Sleep(Convert.ToInt32(CmdDelay));
+            }
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            Simulator = new InputSimulator();
+        }
+
+        private void RepeatNoField_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                RepeatNo = Convert.ToInt32(RepeatNoField.Text);
+            }
+            catch (FormatException) { }
+            catch (NullReferenceException) { };
         }
     }
 }
