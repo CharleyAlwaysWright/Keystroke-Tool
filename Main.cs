@@ -7,54 +7,111 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using WindowsInput.Native;
 using WindowsInput;
 
-namespace Keystroke_Tool
+namespace Keystroke_Tool_V2
 {
-    public partial class KeystrokeTool : Form
+    public partial class Main : Form
     {
-        public static string input;
-        public static bool enter;
-        public static bool tab;
+        public static OpenFileDialog ofd;
+        public static List<string> importedLines;
+        public static double StartDelay;
+        public static double CmdDelay;
+        public static string LoadedFileContents;
         public static InputSimulator Simulator;
-        public static double delay;
-        public static double startDelay;
-        public static int repetitions;
+        public static int RepeatNo;
+        
 
-        public KeystrokeTool()
+        public Main()
         {
             InitializeComponent();
         }
 
-        private void KeystrokeTool_Load(object sender, EventArgs e)
+        private void EditorBtn_Click(object sender, EventArgs e)
         {
-            
+            Editor editor = new Editor();
+            editor.Show();
         }
 
-        private void GoBtn_Click(object sender, EventArgs e)
+        private void LoadBtn_Click(object sender, EventArgs e)
+        {
+            ofd = new OpenFileDialog();
+
+            ofd.Filter = "KT|*.kt";
+
+            // Show dialog and put file name into OutputLabel
+            if(ofd.ShowDialog() == DialogResult.OK)
+            {
+                OutputLabel.Text = "Loaded File: " + ofd.SafeFileName;
+
+                importedLines = File.ReadAllLines(ofd.FileName).ToList();
+                LoadedFileContents = File.ReadAllText(ofd.FileName);
+            }
+        }
+
+        private void StartBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                StartDelay = Convert.ToDouble(StartDelayField.Text);
+                CmdDelay = Convert.ToDouble(CmdDelayField.Text);
+            }
+            catch (FormatException) { StartDelay = 0; CmdDelay = 0; }
+            catch(ArgumentNullException) { StartDelay = 0; CmdDelay = 0; };
+
+            Simulator.Keyboard.Sleep(Convert.ToInt32(StartDelay));
+
+            for(int i = 0; i < RepeatNo; i++)
+            {
+                foreach (string line in importedLines)
+                {
+                    string[] words = line.Split(null);
+
+                    foreach (string word in words)
+                    {
+                        if (word.Contains("\\d"))
+                        {
+                            // Do something
+                        }
+                        else
+                        {
+                            switch (word)
+                            {
+                                case "\\e":
+                                    Simulator.Keyboard.KeyPress(VirtualKeyCode.RETURN);
+                                    break;
+
+                                case "\\t":
+                                    Simulator.Keyboard.KeyPress(VirtualKeyCode.TAB);
+                                    break;
+
+                                default:
+                                    Simulator.Keyboard.TextEntry(word);
+                                    Simulator.Keyboard.KeyPress(VirtualKeyCode.SPACE);
+                                    break;
+                            }
+                        }
+                    }
+                }
+                Simulator.Keyboard.Sleep(Convert.ToInt32(CmdDelay));
+            }
+        }
+
+        private void Main_Load(object sender, EventArgs e)
         {
             Simulator = new InputSimulator();
+        }
 
-            try { input = InputField.Text; }
-            catch (NullReferenceException) { input = ""; }
-            try { delay = Convert.ToDouble(waitTimeField.Text); }
-            catch (FormatException) { delay = 0; }
-            catch (NullReferenceException) { delay = 0; }
-            startDelay = Convert.ToDouble(startDelayField.Text);
-            repetitions = Convert.ToInt32(repetitionsField.Text);
-            enter = EnterCheckBox.Checked;
-            tab = TabCheckBox.Checked;
-
-
-            Simulator.Keyboard.Sleep(Convert.ToInt32(startDelay * 1000));
-            for (int i = 0; i < repetitions; i++)
+        private void RepeatNoField_TextChanged(object sender, EventArgs e)
+        {
+            try
             {
-                Simulator.Keyboard.TextEntry(input);
-                if (enter == true) { Simulator.Keyboard.KeyPress(VirtualKeyCode.RETURN); }
-                if (tab == true) { Simulator.Keyboard.KeyPress(VirtualKeyCode.TAB); }
-                Simulator.Keyboard.Sleep(Convert.ToInt32(delay * 1000));
+                RepeatNo = Convert.ToInt32(RepeatNoField.Text);
             }
+            catch (FormatException) { }
+            catch (NullReferenceException) { };
         }
     }
 }
