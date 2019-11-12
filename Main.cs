@@ -91,12 +91,44 @@ namespace Keystroke_Tool_V2
                         {
                             switch (word)
                             {
-                                case "\\e":
+                                case "\\R":
                                     Simulator.Keyboard.KeyPress(VirtualKeyCode.RETURN);
                                     break;
 
-                                case "\\t":
+                                case "\\T":
                                     Simulator.Keyboard.KeyPress(VirtualKeyCode.TAB);
+                                    break;
+
+                                case "\\DEL":
+                                    Simulator.Keyboard.KeyPress(VirtualKeyCode.DELETE);
+                                    break;
+
+                                case "\\B":
+                                    Simulator.Keyboard.KeyPress(VirtualKeyCode.BACK);
+                                    break;
+
+                                case "\\UP":
+                                    Simulator.Keyboard.KeyPress(VirtualKeyCode.UP);
+                                    break;
+
+                                case "\\DOWN":
+                                    Simulator.Keyboard.KeyPress(VirtualKeyCode.DOWN);
+                                    break;
+
+                                case "\\LEFT":
+                                    Simulator.Keyboard.KeyPress(VirtualKeyCode.LEFT);
+                                    break;
+
+                                case "\\RIGHT":
+                                    Simulator.Keyboard.KeyPress(VirtualKeyCode.RIGHT);
+                                    break;
+
+                                case "\\VU":
+                                    Simulator.Keyboard.KeyPress(VirtualKeyCode.VOLUME_UP);
+                                    break;
+
+                                case "\\VD":
+                                    Simulator.Keyboard.KeyPress(VirtualKeyCode.VOLUME_DOWN);
                                     break;
 
                                 default:
