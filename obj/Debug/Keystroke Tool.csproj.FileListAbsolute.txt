@@ -1,0 +1,31 @@
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\bin\Debug\Keystroke Tool V2.exe.config
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\bin\Debug\Keystroke Tool V2.exe
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\bin\Debug\Keystroke Tool V2.pdb
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\obj\Debug\Keystroke Tool.csprojAssemblyReference.cache
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\obj\Debug\Keystroke_Tool_V2.Editor.resources
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\obj\Debug\Keystroke_Tool_V2.Main.resources
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\obj\Debug\Keystroke_Tool_V2.Properties.Resources.resources
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\obj\Debug\Keystroke Tool.csproj.GenerateResource.cache
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\obj\Debug\Keystroke Tool V2.exe
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\obj\Debug\Keystroke Tool V2.pdb
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\bin\Debug\WindowsInput.dll
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\bin\Debug\WindowsInput.xml
+C:\Users\charl\Documents\Projects\C#\Keystroke Tool\obj\Debug\Keystroke Tool.csproj.CopyComplete
+C:\Users\charl\Documents\Projects\C#\Keystroke-Tool\bin\Debug\Keystroke Tool V2.exe.config
+C:\Users\charl\Documents\Projects\C#\Keystroke-Tool\bin\Debug\Keystroke Tool V2.exe.manifest
+C:\Users\charl\Documents\Projects\C#\Keystroke-Tool\bin\Debug\Keystroke Tool V2.application
+C:\Users\charl\Documents\Projects\C#\Keystroke-Tool\bin\Debug\Keystroke Tool V2.exe
+C:\Users\charl\Documents\Projects\C#\Keystroke-Tool\bin\Debug\Keystroke Tool V2.pdb
+C:\Users\charl\Documents\Projects\C#\Keystroke-Tool\bin\Debug\WindowsInput.dll
+C:\Users\charl\Documents\Projects\C#\Keystroke-Tool\bin\Debug\WindowsInput.xml
+C:\Users\charl\Documents\Projects\C#\Keystroke-Tool\obj\Debug\Keystroke Tool.csprojAssemblyReference.cache
+C:\Users\charl\Documents\Projects\C#\Keystroke-Tool\obj\Debug\Keystroke_Tool_V2.Editor.resources
+C:\Users\charl\Documents\Projects\C#\Keystroke-Tool\obj\Debug\Keystroke_Tool_V2.Instructions.resources
+C:\Users\charl\Documents\Projects\C#\Keystroke-Tool\obj\Debug\Keystroke_Tool_V2.Main.resources
+C:\Users\charl\Documents\Projects\C#\Keystroke-Tool\obj\Debug\Keystroke_Tool_V2.Properties.Resources.resources
+C:\Users\charl\Documents\Projects\C#\Keystroke-Tool\obj\Debug\Keystroke Tool.csproj.GenerateResource.cache
+C:\Users\charl\Documents\Projects\C#\Keystroke-Tool\obj\Debug\Keystroke Tool V2.exe.manifest
+C:\Users\charl\Documents\Projects\C#\Keystroke-Tool\obj\Debug\Keystroke Tool V2.application
+C:\Users\charl\Documents\Projects\C#\Keystroke-Tool\obj\Debug\Keystroke Tool.csproj.CopyComplete
+C:\Users\charl\Documents\Projects\C#\Keystroke-Tool\obj\Debug\Keystroke Tool V2.exe
+C:\Users\charl\Documents\Projects\C#\Keystroke-Tool\obj\Debug\Keystroke Tool V2.pdb

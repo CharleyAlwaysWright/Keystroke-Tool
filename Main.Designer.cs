@@ -29,304 +29,160 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.TriggerLabel = new System.Windows.Forms.Label();
-            this.Trigger = new System.Windows.Forms.TextBox();
-            this.TriggerBtn = new System.Windows.Forms.Button();
-            this.InputLabel = new System.Windows.Forms.Label();
-            this.Input = new System.Windows.Forms.TextBox();
-            this.PopOutBtn = new System.Windows.Forms.Button();
+            this.StartDelayLabel = new System.Windows.Forms.Label();
+            this.StartDelayField = new System.Windows.Forms.TextBox();
+            this.CmdDelayField = new System.Windows.Forms.TextBox();
+            this.CmdDelayLabel = new System.Windows.Forms.Label();
+            this.StartBtn = new System.Windows.Forms.Button();
             this.LoadBtn = new System.Windows.Forms.Button();
             this.SaveBtn = new System.Windows.Forms.Button();
-            this.OptionsLabel = new System.Windows.Forms.Label();
-            this.InsertReturnBtn = new System.Windows.Forms.Button();
-            this.InsertTabBtn = new System.Windows.Forms.Button();
-            this.InsertKBSCBtn = new System.Windows.Forms.Button();
-            this.TabCheckBox = new System.Windows.Forms.CheckBox();
-            this.ReturnCheckBox = new System.Windows.Forms.CheckBox();
-            this.OutputLabel = new System.Windows.Forms.Label();
-            this.Output = new System.Windows.Forms.TextBox();
-            this.StartBtn = new System.Windows.Forms.Button();
-            this.ClearBtn = new System.Windows.Forms.Button();
-            this.InstructionsBtn = new System.Windows.Forms.Button();
-            this.InstructionsLabel = new System.Windows.Forms.Label();
-            this.VersionLabel = new System.Windows.Forms.Label();
-            this.DelaysLabel = new System.Windows.Forms.Label();
-            this.DelaysBtn = new System.Windows.Forms.Button();
+            this.EditorBtn = new System.Windows.Forms.Button();
+            this.StopBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.OutputLabel = new System.Windows.Forms.Label();
+            this.RepeatNoField = new System.Windows.Forms.TextBox();
+            this.RepeatNoLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // TriggerLabel
+            // StartDelayLabel
             // 
-            this.TriggerLabel.AutoSize = true;
-            this.TriggerLabel.Location = new System.Drawing.Point(4, 4);
-            this.TriggerLabel.Name = "TriggerLabel";
-            this.TriggerLabel.Size = new System.Drawing.Size(40, 13);
-            this.TriggerLabel.TabIndex = 0;
-            this.TriggerLabel.Text = "Trigger";
+            this.StartDelayLabel.AutoSize = true;
+            this.StartDelayLabel.Location = new System.Drawing.Point(4, 4);
+            this.StartDelayLabel.Name = "StartDelayLabel";
+            this.StartDelayLabel.Size = new System.Drawing.Size(81, 13);
+            this.StartDelayLabel.TabIndex = 0;
+            this.StartDelayLabel.Text = "Start Delay (ms)";
             // 
-            // Trigger
+            // StartDelayField
             // 
-            this.Trigger.Location = new System.Drawing.Point(7, 20);
-            this.Trigger.Name = "Trigger";
-            this.Trigger.Size = new System.Drawing.Size(132, 20);
-            this.Trigger.TabIndex = 1;
+            this.StartDelayField.Location = new System.Drawing.Point(7, 20);
+            this.StartDelayField.Name = "StartDelayField";
+            this.StartDelayField.Size = new System.Drawing.Size(78, 20);
+            this.StartDelayField.TabIndex = 1;
             // 
-            // TriggerBtn
+            // CmdDelayField
             // 
-            this.TriggerBtn.Location = new System.Drawing.Point(145, 20);
-            this.TriggerBtn.Name = "TriggerBtn";
-            this.TriggerBtn.Size = new System.Drawing.Size(40, 20);
-            this.TriggerBtn.TabIndex = 2;
-            this.TriggerBtn.Text = "Set";
-            this.TriggerBtn.UseVisualStyleBackColor = true;
-            this.TriggerBtn.Click += new System.EventHandler(this.TriggerBtn_Click);
+            this.CmdDelayField.Location = new System.Drawing.Point(91, 20);
+            this.CmdDelayField.Name = "CmdDelayField";
+            this.CmdDelayField.Size = new System.Drawing.Size(80, 20);
+            this.CmdDelayField.TabIndex = 3;
             // 
-            // InputLabel
+            // CmdDelayLabel
             // 
-            this.InputLabel.AutoSize = true;
-            this.InputLabel.Location = new System.Drawing.Point(4, 52);
-            this.InputLabel.Name = "InputLabel";
-            this.InputLabel.Size = new System.Drawing.Size(31, 13);
-            this.InputLabel.TabIndex = 3;
-            this.InputLabel.Text = "Input";
+            this.CmdDelayLabel.AutoSize = true;
+            this.CmdDelayLabel.Location = new System.Drawing.Point(88, 4);
+            this.CmdDelayLabel.Name = "CmdDelayLabel";
+            this.CmdDelayLabel.Size = new System.Drawing.Size(80, 13);
+            this.CmdDelayLabel.TabIndex = 2;
+            this.CmdDelayLabel.Text = "Cmd Delay (ms)";
             // 
-            // Input
+            // StartBtn
             // 
-            this.Input.Location = new System.Drawing.Point(7, 68);
-            this.Input.Multiline = true;
-            this.Input.Name = "Input";
-            this.Input.Size = new System.Drawing.Size(290, 150);
-            this.Input.TabIndex = 4;
-            this.Input.TextChanged += new System.EventHandler(this.Input_TextChanged);
-            // 
-            // PopOutBtn
-            // 
-            this.PopOutBtn.Location = new System.Drawing.Point(7, 231);
-            this.PopOutBtn.Name = "PopOutBtn";
-            this.PopOutBtn.Size = new System.Drawing.Size(67, 23);
-            this.PopOutBtn.TabIndex = 5;
-            this.PopOutBtn.Text = "Pop Out";
-            this.PopOutBtn.UseVisualStyleBackColor = true;
-            this.PopOutBtn.Click += new System.EventHandler(this.PopOutBtn_Click);
+            this.StartBtn.Location = new System.Drawing.Point(238, 5);
+            this.StartBtn.Name = "StartBtn";
+            this.StartBtn.Size = new System.Drawing.Size(75, 31);
+            this.StartBtn.TabIndex = 4;
+            this.StartBtn.Text = "Start";
+            this.StartBtn.UseVisualStyleBackColor = true;
+            this.StartBtn.Click += new System.EventHandler(this.StartBtn_Click);
             // 
             // LoadBtn
             // 
-            this.LoadBtn.Location = new System.Drawing.Point(80, 231);
+            this.LoadBtn.Location = new System.Drawing.Point(7, 46);
             this.LoadBtn.Name = "LoadBtn";
             this.LoadBtn.Size = new System.Drawing.Size(67, 23);
-            this.LoadBtn.TabIndex = 6;
+            this.LoadBtn.TabIndex = 5;
             this.LoadBtn.Text = "Load";
             this.LoadBtn.UseVisualStyleBackColor = true;
             this.LoadBtn.Click += new System.EventHandler(this.LoadBtn_Click);
             // 
             // SaveBtn
             // 
-            this.SaveBtn.Location = new System.Drawing.Point(157, 231);
+            this.SaveBtn.Location = new System.Drawing.Point(80, 46);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(67, 23);
-            this.SaveBtn.TabIndex = 7;
+            this.SaveBtn.TabIndex = 6;
             this.SaveBtn.Text = "Save";
             this.SaveBtn.UseVisualStyleBackColor = true;
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
-            // OptionsLabel
+            // EditorBtn
             // 
-            this.OptionsLabel.AutoSize = true;
-            this.OptionsLabel.Location = new System.Drawing.Point(308, 52);
-            this.OptionsLabel.Name = "OptionsLabel";
-            this.OptionsLabel.Size = new System.Drawing.Size(43, 13);
-            this.OptionsLabel.TabIndex = 8;
-            this.OptionsLabel.Text = "Options";
+            this.EditorBtn.Location = new System.Drawing.Point(153, 46);
+            this.EditorBtn.Name = "EditorBtn";
+            this.EditorBtn.Size = new System.Drawing.Size(73, 23);
+            this.EditorBtn.TabIndex = 7;
+            this.EditorBtn.Text = "Editor";
+            this.EditorBtn.UseVisualStyleBackColor = true;
+            this.EditorBtn.Click += new System.EventHandler(this.EditorBtn_Click);
             // 
-            // InsertReturnBtn
+            // StopBtn
             // 
-            this.InsertReturnBtn.Location = new System.Drawing.Point(311, 68);
-            this.InsertReturnBtn.Name = "InsertReturnBtn";
-            this.InsertReturnBtn.Size = new System.Drawing.Size(81, 23);
-            this.InsertReturnBtn.TabIndex = 9;
-            this.InsertReturnBtn.Text = "Insert Return";
-            this.InsertReturnBtn.UseVisualStyleBackColor = true;
-            this.InsertReturnBtn.Click += new System.EventHandler(this.InsertReturnBtn_Click);
-            // 
-            // InsertTabBtn
-            // 
-            this.InsertTabBtn.Location = new System.Drawing.Point(398, 68);
-            this.InsertTabBtn.Name = "InsertTabBtn";
-            this.InsertTabBtn.Size = new System.Drawing.Size(81, 23);
-            this.InsertTabBtn.TabIndex = 10;
-            this.InsertTabBtn.Text = "Insert Tab";
-            this.InsertTabBtn.UseVisualStyleBackColor = true;
-            this.InsertTabBtn.Click += new System.EventHandler(this.InsertTabBtn_Click);
-            // 
-            // InsertKBSCBtn
-            // 
-            this.InsertKBSCBtn.Location = new System.Drawing.Point(311, 97);
-            this.InsertKBSCBtn.Name = "InsertKBSCBtn";
-            this.InsertKBSCBtn.Size = new System.Drawing.Size(168, 23);
-            this.InsertKBSCBtn.TabIndex = 11;
-            this.InsertKBSCBtn.Text = "Insert Keyboard Shortcut (+)";
-            this.InsertKBSCBtn.UseVisualStyleBackColor = true;
-            this.InsertKBSCBtn.Click += new System.EventHandler(this.InsertKBSCBtn_Click);
-            // 
-            // TabCheckBox
-            // 
-            this.TabCheckBox.AutoSize = true;
-            this.TabCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TabCheckBox.Location = new System.Drawing.Point(311, 126);
-            this.TabCheckBox.Name = "TabCheckBox";
-            this.TabCheckBox.Size = new System.Drawing.Size(78, 17);
-            this.TabCheckBox.TabIndex = 12;
-            this.TabCheckBox.Text = "Tab at end";
-            this.TabCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // ReturnCheckBox
-            // 
-            this.ReturnCheckBox.AutoSize = true;
-            this.ReturnCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReturnCheckBox.Location = new System.Drawing.Point(398, 126);
-            this.ReturnCheckBox.Name = "ReturnCheckBox";
-            this.ReturnCheckBox.Size = new System.Drawing.Size(91, 17);
-            this.ReturnCheckBox.TabIndex = 13;
-            this.ReturnCheckBox.Text = "Return at end";
-            this.ReturnCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // OutputLabel
-            // 
-            this.OutputLabel.AutoSize = true;
-            this.OutputLabel.Location = new System.Drawing.Point(308, 155);
-            this.OutputLabel.Name = "OutputLabel";
-            this.OutputLabel.Size = new System.Drawing.Size(39, 13);
-            this.OutputLabel.TabIndex = 14;
-            this.OutputLabel.Text = "Output";
-            // 
-            // Output
-            // 
-            this.Output.Location = new System.Drawing.Point(311, 171);
-            this.Output.Multiline = true;
-            this.Output.Name = "Output";
-            this.Output.Size = new System.Drawing.Size(168, 47);
-            this.Output.TabIndex = 15;
-            // 
-            // StartBtn
-            // 
-            this.StartBtn.Location = new System.Drawing.Point(400, 224);
-            this.StartBtn.Name = "StartBtn";
-            this.StartBtn.Size = new System.Drawing.Size(79, 30);
-            this.StartBtn.TabIndex = 16;
-            this.StartBtn.Text = "Start";
-            this.StartBtn.UseVisualStyleBackColor = true;
-            this.StartBtn.Click += new System.EventHandler(this.StartBtn_Click);
-            // 
-            // ClearBtn
-            // 
-            this.ClearBtn.Location = new System.Drawing.Point(230, 231);
-            this.ClearBtn.Name = "ClearBtn";
-            this.ClearBtn.Size = new System.Drawing.Size(67, 23);
-            this.ClearBtn.TabIndex = 17;
-            this.ClearBtn.Text = "Clear";
-            this.ClearBtn.UseVisualStyleBackColor = true;
-            this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
-            // 
-            // InstructionsBtn
-            // 
-            this.InstructionsBtn.Location = new System.Drawing.Point(310, 20);
-            this.InstructionsBtn.Name = "InstructionsBtn";
-            this.InstructionsBtn.Size = new System.Drawing.Size(74, 20);
-            this.InstructionsBtn.TabIndex = 18;
-            this.InstructionsBtn.Text = "Instructions";
-            this.InstructionsBtn.UseVisualStyleBackColor = true;
-            this.InstructionsBtn.Click += new System.EventHandler(this.InstructionsBtn_Click);
-            // 
-            // InstructionsLabel
-            // 
-            this.InstructionsLabel.AutoSize = true;
-            this.InstructionsLabel.Location = new System.Drawing.Point(307, 4);
-            this.InstructionsLabel.Name = "InstructionsLabel";
-            this.InstructionsLabel.Size = new System.Drawing.Size(61, 13);
-            this.InstructionsLabel.TabIndex = 19;
-            this.InstructionsLabel.Text = "Instructions";
-            // 
-            // VersionLabel
-            // 
-            this.VersionLabel.AutoSize = true;
-            this.VersionLabel.Location = new System.Drawing.Point(330, 236);
-            this.VersionLabel.Name = "VersionLabel";
-            this.VersionLabel.Size = new System.Drawing.Size(38, 13);
-            this.VersionLabel.TabIndex = 20;
-            this.VersionLabel.Text = "V1.0.0";
-            // 
-            // DelaysLabel
-            // 
-            this.DelaysLabel.AutoSize = true;
-            this.DelaysLabel.Location = new System.Drawing.Point(397, 4);
-            this.DelaysLabel.Name = "DelaysLabel";
-            this.DelaysLabel.Size = new System.Drawing.Size(39, 13);
-            this.DelaysLabel.TabIndex = 22;
-            this.DelaysLabel.Text = "Delays";
-            // 
-            // DelaysBtn
-            // 
-            this.DelaysBtn.Location = new System.Drawing.Point(400, 20);
-            this.DelaysBtn.Name = "DelaysBtn";
-            this.DelaysBtn.Size = new System.Drawing.Size(74, 20);
-            this.DelaysBtn.TabIndex = 21;
-            this.DelaysBtn.Text = "Delays";
-            this.DelaysBtn.UseVisualStyleBackColor = true;
+            this.StopBtn.Location = new System.Drawing.Point(238, 41);
+            this.StopBtn.Name = "StopBtn";
+            this.StopBtn.Size = new System.Drawing.Size(75, 31);
+            this.StopBtn.TabIndex = 8;
+            this.StopBtn.Text = "Stop";
+            this.StopBtn.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(202, 4);
+            this.label1.Location = new System.Drawing.Point(4, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 13);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Repeat No.";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 9;
             // 
-            // textBox1
+            // OutputLabel
             // 
-            this.textBox1.Location = new System.Drawing.Point(205, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(77, 20);
-            this.textBox1.TabIndex = 24;
+            this.OutputLabel.AutoSize = true;
+            this.OutputLabel.Location = new System.Drawing.Point(6, 72);
+            this.OutputLabel.Name = "OutputLabel";
+            this.OutputLabel.Size = new System.Drawing.Size(79, 13);
+            this.OutputLabel.TabIndex = 10;
+            this.OutputLabel.Text = "No File Loaded";
+            // 
+            // RepeatNoField
+            // 
+            this.RepeatNoField.Location = new System.Drawing.Point(177, 20);
+            this.RepeatNoField.Name = "RepeatNoField";
+            this.RepeatNoField.Size = new System.Drawing.Size(49, 20);
+            this.RepeatNoField.TabIndex = 12;
+            this.RepeatNoField.TextChanged += new System.EventHandler(this.RepeatNoField_TextChanged);
+            // 
+            // RepeatNoLabel
+            // 
+            this.RepeatNoLabel.AutoSize = true;
+            this.RepeatNoLabel.Location = new System.Drawing.Point(174, 4);
+            this.RepeatNoLabel.Name = "RepeatNoLabel";
+            this.RepeatNoLabel.Size = new System.Drawing.Size(62, 13);
+            this.RepeatNoLabel.TabIndex = 11;
+            this.RepeatNoLabel.Text = "Repeat No.";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(486, 261);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.DelaysLabel);
-            this.Controls.Add(this.DelaysBtn);
-            this.Controls.Add(this.VersionLabel);
-            this.Controls.Add(this.InstructionsLabel);
-            this.Controls.Add(this.InstructionsBtn);
-            this.Controls.Add(this.ClearBtn);
-            this.Controls.Add(this.StartBtn);
-            this.Controls.Add(this.Output);
+            this.ClientSize = new System.Drawing.Size(324, 91);
+            this.Controls.Add(this.RepeatNoField);
+            this.Controls.Add(this.RepeatNoLabel);
             this.Controls.Add(this.OutputLabel);
-            this.Controls.Add(this.ReturnCheckBox);
-            this.Controls.Add(this.TabCheckBox);
-            this.Controls.Add(this.InsertKBSCBtn);
-            this.Controls.Add(this.InsertTabBtn);
-            this.Controls.Add(this.InsertReturnBtn);
-            this.Controls.Add(this.OptionsLabel);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.StopBtn);
+            this.Controls.Add(this.EditorBtn);
             this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.LoadBtn);
-            this.Controls.Add(this.PopOutBtn);
-            this.Controls.Add(this.Input);
-            this.Controls.Add(this.InputLabel);
-            this.Controls.Add(this.TriggerBtn);
-            this.Controls.Add(this.Trigger);
-            this.Controls.Add(this.TriggerLabel);
+            this.Controls.Add(this.StartBtn);
+            this.Controls.Add(this.CmdDelayField);
+            this.Controls.Add(this.CmdDelayLabel);
+            this.Controls.Add(this.StartDelayField);
+            this.Controls.Add(this.StartDelayLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Main";
-            this.Text = "Kestroke Tool";
-            this.Activated += new System.EventHandler(this.Form_Activated);
+            this.Text = "Keystroke Tool";
             this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -335,31 +191,19 @@
 
         #endregion
 
-        private System.Windows.Forms.Label TriggerLabel;
-        private System.Windows.Forms.TextBox Trigger;
-        private System.Windows.Forms.Button TriggerBtn;
-        private System.Windows.Forms.Label InputLabel;
-        private System.Windows.Forms.TextBox Input;
-        private System.Windows.Forms.Button PopOutBtn;
+        private System.Windows.Forms.Label StartDelayLabel;
+        private System.Windows.Forms.TextBox StartDelayField;
+        private System.Windows.Forms.TextBox CmdDelayField;
+        private System.Windows.Forms.Label CmdDelayLabel;
+        private System.Windows.Forms.Button StartBtn;
         private System.Windows.Forms.Button LoadBtn;
         private System.Windows.Forms.Button SaveBtn;
-        private System.Windows.Forms.Label OptionsLabel;
-        private System.Windows.Forms.Button InsertReturnBtn;
-        private System.Windows.Forms.Button InsertTabBtn;
-        private System.Windows.Forms.Button InsertKBSCBtn;
-        private System.Windows.Forms.CheckBox TabCheckBox;
-        private System.Windows.Forms.CheckBox ReturnCheckBox;
-        private System.Windows.Forms.Label OutputLabel;
-        private System.Windows.Forms.TextBox Output;
-        private System.Windows.Forms.Button StartBtn;
-        private System.Windows.Forms.Button ClearBtn;
-        private System.Windows.Forms.Button InstructionsBtn;
-        private System.Windows.Forms.Label InstructionsLabel;
-        private System.Windows.Forms.Label VersionLabel;
-        private System.Windows.Forms.Label DelaysLabel;
-        private System.Windows.Forms.Button DelaysBtn;
+        private System.Windows.Forms.Button EditorBtn;
+        private System.Windows.Forms.Button StopBtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label OutputLabel;
+        private System.Windows.Forms.TextBox RepeatNoField;
+        private System.Windows.Forms.Label RepeatNoLabel;
     }
 }
 
