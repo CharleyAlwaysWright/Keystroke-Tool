@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Keystroke Tool V3</title>
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="script-src 'self' 'unsafe-inline';"
+		/>
+	</head>
+	<body>
+		<script src="../assets/js/app.js"></script>
+
+		<div class="div">
+			<div class="logo">
+				<a class="logoLink" href="https://charleyw.com">
+					<img class="logoImg" src="../assets/images/logo2.jpg" alt="Logo" />
+				</a>
+			</div>
+			<div class="StartDelay">
+				<input
+					type="text"
+					name="Start Delay"
+					id="StartDelay"
+					placeholder="Start Delay (ms)"
+				/>
+			</div>
+			<div class="CmdDelay">
+				<input
+					type="text"
+					name="Cmd Delay"
+					id="CmdDelay"
+					placeholder="Command Delay (ms)"
+				/>
+			</div>
+			<div class="ControlButtons">
+				<a href="#" onclick="Run(); return false" class="start">Start</a>
+				<a href="#" onclick="Stop(); return false" class="stop">Stop</a>
+			</div>
+			<div class="Buttons">
+				<a id="loadBtn" onclick="LoadFile(); return false" href="#">Load</a>
+				<a href="#" onclick="SaveFile(); return false">Save</a>
+				<a type="button" onclick="LaunchEditor(); return false" href="#"
+					>Editor</a
+				>
+			</div>
+			<div class="LoadedFile">
+				<p class="FileLoaded">Loaded: Spam_Roan.kt</p>
+			</div>
+		</div>
+
+		<p class="hidden fileContents"></p>
+	</body>
+</html>

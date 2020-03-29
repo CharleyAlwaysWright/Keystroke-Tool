@@ -1,0 +1,18 @@
+{
+	"name": "keystroke-tool-v3",
+	"version": "1.0.0",
+	"description": "KEystroke Tool, but using Node.JS and Electron",
+	"main": "main.js",
+	"scripts": {
+		"start": "electron . --disable-gpu"
+	},
+	"author": "Charley Wright",
+	"license": "ISC",
+	"dependencies": {
+		"electron": "^7.1.11",
+		"fs": "0.0.1-security"
+	},
+	"devDependencies": {
+		"node-key-sender": "^1.0.11"
+	}
+}

@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300&display=swap");
+
+body {
+	font-family: "Roboto", sans-serif;
+	margin: 0;
+	font-weight: 100;
+	background-color: #a8a8a8;
+}
+
+.div {
+	height: 100vh;
+	width: 100vh;
+	display: grid;
+	grid-template-columns: 220px 190px 220px 250px;
+	grid-template-rows: 125px 75px 50px;
+	grid-template-areas:
+		"logo StartDelay CmdDelay ControlButtons"
+		"logo Buttons Buttons ControlButtons"
+		"logo LoadedFile LoadedFile ControlButtons";
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin: 0;
+}
+
+.logo {
+	grid-area: logo;
+	display: flex;
+	flex-direction: column;
+}
+
+.logoImg {
+	height: 170px;
+	width: 170px;
+	border-radius: 90px;
+}
+
+.logoLink {
+	margin: 40px;
+	margin-right: 20px;
+	border-style: none;
+	border-radius: 90px;
+	height: 170px;
+	width: 170px;
+	border-radius: 90px;
+}
+
+.StartDelay,
+.CmdDelay {
+	display: flex;
+	margin: auto 10px;
+	flex-direction: column;
+	text-align: left;
+}
+
+.StartDelay p,
+.CmdDelay p {
+	font-size: 16px;
+	font-weight: 300;
+	padding-bottom: 5px;
+}
+
+.StartDelay input,
+.CmdDelay input {
+	font-size: 18px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 100;
+	height: 50px;
+	border-style: none;
+	border-radius: 25px;
+	padding: 0 10px;
+	text-align: center;
+}
+
+.StartDelay input:focus,
+.CmdDelay input:focus {
+	outline: none;
+}
+
+.StartDelay {
+	grid-area: StartDelay;
+}
+
+.CmdDelay {
+	grid-area: CmdDelay;
+}
+
+.ControlButtons {
+	grid-area: ControlButtons;
+	display: flex;
+	flex-direction: column;
+}
+
+.start,
+.stop {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	padding: auto auto auto auto;
+	height: 100px;
+	width: 200px;
+	border-style: none;
+	border-radius: 50px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	font-size: 35px;
+	transition: ease-in-out 0.2s;
+	color: #000000;
+	text-decoration: none;
+	text-align: center;
+	justify-content: center;
+}
+
+.start:hover,
+.stop:hover {
+	height: 110px;
+	width: 210px;
+}
+
+.start {
+	background-color: #3ef951;
+}
+
+.stop {
+	background-color: #ff3f3f;
+}
+
+.Buttons {
+	grid-area: Buttons;
+	margin: auto;
+}
+
+.Buttons a {
+	margin: 5px;
+	/* width: 110px; */
+	padding: 10px 20px;
+	/* height: 40px; */
+	border-radius: 20px;
+	border-style: none;
+	background-color: buttonface;
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000000;
+	transition: ease-in-out 0.15s;
+}
+
+.Buttons a:hover {
+	padding: 13px 23px;
+}
+
+.LoadedFile {
+	grid-area: LoadedFile;
+	display: flex;
+}
+
+.FileLoaded {
+	font-size: 25px;
+	margin: auto;
+}
+
+.hidden {
+	display: none;
+}
