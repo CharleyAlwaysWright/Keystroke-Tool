@@ -9,7 +9,7 @@
 	"author": "Charley Wright",
 	"license": "ISC",
 	"dependencies": {
-		"electron": "^7.1.11",
+		"electron": "^13.6.6",
 		"fs": "0.0.1-security"
 	},
 	"devDependencies": {
